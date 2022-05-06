@@ -1,0 +1,57 @@
+<ion-header>
+  
+  <ion-toolbar>
+    <ion-button  slot="start"  fill="clear" href="publicaciones" >
+      cancelar    
+    </ion-button>
+
+    <ion-buttons slot="end">
+      <ion-button (click)= "savePicture()" color="primary">
+        <ion-icon name="cloud-upload"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Crear</ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+
+  <ion-card>
+
+    <ion-col size ="6"  *ngFor="let foto of fotoService.fotos">
+         
+      <ion-img [src] = "foto.webviewPath"  ></ion-img>
+        
+    </ion-col>
+      
+    <ion-card-header>
+
+
+      <ion-card-title>                
+        <ion-input placeholder="Título" [(ngModel)]="titulo" type="text" ></ion-input>      
+      </ion-card-title>
+      <ion-input placeholder="subtítulo" [(ngModel)]="subtitulo" type="text" ></ion-input> 
+    </ion-card-header>
+      
+    <ion-card-content>
+      <p><ion-textarea maxlength="30"  placeholder="Descripcion" [(ngModel)]="descripcion" type="text"></ion-textarea></p>
+    </ion-card-content>
+
+      
+    
+  </ion-card>
+  
+
+<div id="container">
+  <ion-button (click)="addPhotoToGallery()"  expand="block" fill="clear" shape="round" >
+    Subir imagen     
+  </ion-button>
+</div>
+
+
+</ion-content>

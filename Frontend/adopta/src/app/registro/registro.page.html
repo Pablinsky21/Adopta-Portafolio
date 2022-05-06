@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar>
+
+    <ion-button  slot="start"  fill="clear" href="home" >
+      cancelar    
+    </ion-button>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-menu side="start" menuId="first" contentId="main">
+
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      
+      <ion-item>Adopta</ion-item>
+      <ion-item>Publicaciones</ion-item>
+      <ion-item>Noticias</ion-item>
+      
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
+
+<ion-content [fullscreen]="true">
+
+ 
+  
+  <div id="container" style="text-align: center;">
+   
+    <div style="text-align: center;">
+      <br><br>
+      <h3  text-align="center">Formulario de registro</h3>
+    </div>
+
+    <ion-list lines="full">
+
+      <ion-item>
+        <ion-label position = "floating" >Correo</ion-label>
+        <ion-input [(ngModel)]="correo" type="mail"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position = "floating" >Usuario</ion-label>
+        <ion-input [(ngModel)]="usuario" type="text"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position = "floating" >Contraseña</ion-label>
+        <ion-input [(ngModel)]="clave" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position = "floating" >Confirmar Contraseña</ion-label>
+        <ion-input [(ngModel)]="clave2" type="text"></ion-input>
+      </ion-item>
+  
+      <ion-row>
+        <ion-col>
+  
+          <ion-button type="button" (click)="addUser()" color="primary" shape="full" expand="block">
+            Registrarse
+          </ion-button>
+  
+        </ion-col>
+      </ion-row>
+  
+    </ion-list>
+
+    
+ 
+  </div>
+
+  <div >
+    <img class="img" src="/assets/img/pata.png" >
+  </div>
+
+  
+</ion-content>

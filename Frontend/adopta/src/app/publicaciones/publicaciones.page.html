@@ -1,0 +1,75 @@
+
+<ion-header>
+  
+  <ion-toolbar>
+
+    <ion-buttons slot="end">
+      <ion-button href="/agregar" color="primary">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>publicaciones</ion-title>
+
+   
+
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+   
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        
+        <ion-item>Adopta</ion-item>
+        <ion-item>Publicaciones</ion-item>
+        <ion-item>Noticias</ion-item>
+        
+      </ion-list>
+    </ion-content>
+  
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+
+
+
+
+
+
+
+  <ion-card *ngFor="let data of posts">
+      
+    <ion-img  [src]="data.imagen" ></ion-img>
+
+
+    
+
+    <ion-card-header>
+
+
+      <ion-card-title>                
+        <ion-label>{{data.titulo}}</ion-label>     
+      </ion-card-title>
+      <ion-label>{{data.subtitulo}}</ion-label>  
+
+    </ion-card-header>
+      
+    <ion-card-content>
+      <ion-label>{{data.descripcion}}</ion-label> 
+    </ion-card-content>
+
+      
+    
+  </ion-card>
+
+
+</ion-content>

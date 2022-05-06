@@ -1,0 +1,8 @@
+{
+  "name": "adopta",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

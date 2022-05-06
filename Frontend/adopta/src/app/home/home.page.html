@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+
+
+</ion-header>
+
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      
+      <ion-item>Adopta</ion-item>
+      <ion-item>Publicaciones</ion-item>
+      <ion-item>Noticias</ion-item>
+      
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
+
+
+<ion-content [fullscreen]="true">
+
+  <div >
+    <img class="img" src="/assets/img/pata.png" >
+  </div>
+  
+  <ion-list lines="full">
+
+    <ion-item>
+      <ion-label position = "floating" >Usuario</ion-label>
+      <ion-input [(ngModel)]="user" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position = "floating" >Contraseña</ion-label>
+      <ion-input [(ngModel)]="pass" type="text"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+
+        <ion-button type="button" (click)="iniciarSesion()" color="primary" shape="full" expand="block">
+          Iniciar Sesión
+        </ion-button>
+
+        <ion-button type="button"  color="primary" shape="full" expand="block" href="/registro">
+          Registrarse
+        </ion-button>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-list>
+  
+
+  
+</ion-content>
+
